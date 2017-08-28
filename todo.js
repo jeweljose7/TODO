@@ -20,7 +20,7 @@ function add() {
 function show() {
     var todos = get_todos();
 
-    var html = '<ul>';
+    var html = '<ul class="listoftodos">';
     for(var i=0; i<todos.length; i++) {
         html += '<li>' + todos[i] + '<button class="remove" id="' + i  + '">x</button></li>';
     };
@@ -46,9 +46,9 @@ function remove() {
 function show() {
     var todos = get_todos();
  
-    var html = '<ul>';
+    var html = '<ul class="god" >';
     for(var i=0; i<todos.length; i++) {
-        html += '<li>' + todos[i] + '<button class="remove" id="' + i  + '">x</button></li>';
+        html += '<li class="card-panel">' + todos[i] + '<button class="remove" id="' + i  + '">x</button></li>';
     };
     html += '</ul>';
  

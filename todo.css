@@ -1,7 +1,20 @@
 
 body {
-	background-color: #6b0808;
+	background-color:  #03a9f4;
 	font-family: serif;
+}
+ul {
+	height: 200px;
+	background-color: white;
+	width: 100%;
+}
+li {
+	color: #01579b;
+    width: 100%;
+    height: 50px;
+    background-color: #ffffff;
+    margin-bottom: 8px;
+}
 }
 .page {
 	
@@ -17,14 +30,13 @@ body {
     text-align: center;
     font-size: 34px;
     height: 60px;
+    
+    background-color: #01579b;
 }
-.underline {
-	height: 2px;
-	background-color: white;
-	width: 90%;
-	margin: auto;
+.header__text {
+	color: white;
+}
 
-}
 .mainbody {
 	display: flex;
 	flex-direction:row;
@@ -35,43 +47,69 @@ body {
 	font-size: 20px;
 	text-align: center;
 }
+.card__feature {
+	width: 100%;
+	background-color: #01579b !important;
+	color: white;
+	display: flex;
+	
+}
 .todo {
 	display: flex;
 	flex-direction:column;
 	justify-content:center;
+	align-self: flex-start;
 	width: 25%;
+	background-color: #01579b !important;
 	
 }
 .todo__new {
-	display: flex;
-	flex-direction:row;
-	width: 100%;
-	margin-top: 20px;
+	width: 70%;
+    margin: auto;
+    margin-top: 50px;
 
 }
 #task {
-	width: 80%;
+	width: 100%;
+	border-bottom: 1px solid #f9f8f8;
+	margin-bottom: 0px;
 }
 #add {
-	width: 20%;
-}
-.progress {
-	display: flex;
+	width: 100%;
+	color: black;
 	width: 25%;
+}
+.progres {
+	display: flex;
+	flex-direction:column;
 	justify-content:center;
+	align-self: flex-start;
+	width: 25%;
 }
 
 
 .review {
 	display: flex;
-	width: 25%;
+	flex-direction:column;
 	justify-content:center;
+	align-self: flex-start;
+	width: 25%;
 }
-
 .done {
 	display: flex;
-	width: 25%;
+	flex-direction:column;
 	justify-content:center;
-
-
+	align-self: flex-start;
+	width: 25%;
+}
+.god {
+	width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+.remove {
+	color: red;
+    float: right;
+    display: flex;
+    height: 100%;
 }
