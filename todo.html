@@ -18,7 +18,7 @@
 		
 		<div class="todo__new">
 					<div class="card-panel card__feature">
-						<input id="task">
+						<input id="task" placeholder="Enter a new task">
 						<button id="add">Add</button>
 					</div>
 					<!-- <input id="task">
@@ -28,20 +28,30 @@
 
 			<div class="todo card-panel">
 				<div class="mainbodyall__head">TODO</div>
-				<div id="todos"></div>
+				<ul id="todos" ondrop="drop_handler(event,this);" 
+						 ondragover="dragover_handler(event);">
+				</ul>
 			</div>
 
-			<div class="progres">
+			<div class="progres card-panel">
 				<div class="mainbodyall__head">PROGRESS</div>
+				<ul id="progreses" ondrop="drop_handler(event,this);" 
+						 ondragover="dragover_handler(event);">
+				</ul>
 			</div>
 
-			<div class="review">
+			<div class="review card-panel">
 				<div class="mainbodyall__head">REVIEW</div>
-				
+				<ul id="reviews" ondrop="drop_handler(event,this);" 
+						 ondragover="dragover_handler(event);">
+				</ul>
 			</div>
 
-			<div class="done">
+			<div class="done card-panel">
 				<div class="mainbodyall__head">DONE</div>
+				<ul id="dones" ondrop="drop_handler(event,this);" 
+						 ondragover="dragover_handler(event);">
+				</ul>
 			</div>
 			
 			

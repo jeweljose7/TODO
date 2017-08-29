@@ -4,18 +4,31 @@ body {
 	font-family: serif;
 }
 ul {
-	height: 200px;
-	background-color: white;
+	padding-bottom: 50px;
+	
 	width: 100%;
 }
 li {
+	padding: 0px !important;
 	color: #01579b;
     width: 100%;
     height: 50px;
     background-color: #ffffff;
     margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+p {
+	width: 30px;
+    width: 60%;
+    overflow: inherit;
+    text-overflow: ellipsis;
+    text-align: center;
 }
+
 .page {
 	
 	display: flex;
@@ -41,6 +54,7 @@ li {
 	display: flex;
 	flex-direction:row;
 	padding-top: 25px;
+	justify-content: space-around;
 }
 .mainbodyall__head {
 	color: white;
@@ -59,7 +73,7 @@ li {
 	flex-direction:column;
 	justify-content:center;
 	align-self: flex-start;
-	width: 25%;
+	width: 23%;
 	background-color: #01579b !important;
 	
 }
@@ -75,16 +89,24 @@ li {
 	margin-bottom: 0px;
 }
 #add {
-	width: 100%;
+	
 	color: black;
 	width: 25%;
+	background-color: white;
+}
+#add :active {
+  background-color: red;  
+}
+#add :target {
+  background-color: red;  
 }
 .progres {
 	display: flex;
 	flex-direction:column;
 	justify-content:center;
 	align-self: flex-start;
-	width: 25%;
+	width: 23%;
+	background-color: #01579b !important;
 }
 
 
@@ -93,14 +115,16 @@ li {
 	flex-direction:column;
 	justify-content:center;
 	align-self: flex-start;
-	width: 25%;
+	width: 23%;
+	background-color: #01579b !important;
 }
 .done {
 	display: flex;
 	flex-direction:column;
 	justify-content:center;
 	align-self: flex-start;
-	width: 25%;
+	width: 23%;
+	background-color: #01579b !important;
 }
 .god {
 	width: 100%;
@@ -111,5 +135,8 @@ li {
 	color: red;
     float: right;
     display: flex;
-    height: 100%;
+    
+}
+.rmbtn {
+	height: 100%;
 }
