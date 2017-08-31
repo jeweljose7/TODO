@@ -21,25 +21,30 @@ function dragover_handler(ev) {
 function add() {
     var task = document.getElementById('task').value;
     console.log(task);
-    var newcard = document.createElement("li");
-    var textfield = document.createElement("p");
-    var removebutton = document.createElement("button");
-    removebutton.setAttribute("class","rmbtn");
-    removebutton.innerHTML="X";
-    removebutton.addEventListener("click",remove);
-    newcard.appendChild(textfield);
-    newcard.appendChild(removebutton);
-    textfield.innerHTML= task;
-    newcard.setAttribute("id",counter);
-    counter +=1;
-    newcard.setAttribute("class","card-panel");
-    newcard.setAttribute("draggable","true");
-    newcard.setAttribute("ondrag","drag_handler(event);");
-    newcard.setAttribute("ondragstart","dragstart_handler(event);");
-    var todos=document.getElementById('todos');
-	todos.appendChild(newcard);
-	inputbox=document.getElementById('task');
-	inputbox.value="";
+    if(task=="") {
+    	window.alert("Enter Any Task");
+	}
+	else {
+	    var newcard = document.createElement("li");
+	    var textfield = document.createElement("p");
+	    var removebutton = document.createElement("button");
+	    removebutton.setAttribute("class","rmbtn");
+	    removebutton.innerHTML="X";
+	    removebutton.addEventListener("click",remove);
+	    newcard.appendChild(textfield);
+	    newcard.appendChild(removebutton);
+	    textfield.innerHTML= task;
+	    newcard.setAttribute("id",counter);
+	    counter +=1;
+	    newcard.setAttribute("class","card-panel");
+	    newcard.setAttribute("draggable","true");
+	    newcard.setAttribute("ondrag","drag_handler(event);");
+	    newcard.setAttribute("ondragstart","dragstart_handler(event);");
+	    var todos=document.getElementById('todos');
+		todos.appendChild(newcard);
+		inputbox=document.getElementById('task');
+		inputbox.value="";
+	}
 
 }
 function remove() {
