@@ -1,0 +1,148 @@
+
+body {
+	background-color:  #03a9f4;
+	font-family: 'Permanent Marker', cursive;
+	background-image: url(/home/user/Desktop/Ash-Color-Plain-Wallpaper-Download.jpg);
+	height: 100vh;
+}
+ul {
+	padding-bottom: 50px;
+	width: 100%;
+}
+li {
+	padding: 0px !important;
+	color: #01579b;
+    width: 100%;
+    height: 50px;
+    background-color: #ffffff;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+p {
+	width: 30px;
+    width: 60%;
+    overflow: inherit;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.page {
+	
+	display: flex;
+	flex-direction:column;
+	justify-content:center;
+}
+.header {
+	display: flex;
+	align-items:center;
+	color: #b8b9b1;
+    justify-content: center;
+    text-align: center;
+    font-size: 34px;
+    height: 60px;
+    background-color: #01579b;
+}
+.header__text {
+	color: #b8b9b1;
+}
+
+.mainbody {
+	display: flex;
+	flex-direction:row;
+	padding-top: 50px;
+	justify-content: space-around;
+}
+.mainbodyall__head {
+	color: #b8b9b1;
+	font-size: 20px;
+	text-align: center;
+}
+.card__feature {
+	width: 100%;
+	background-color: #01579b !important;
+	color: white;
+	display: flex;
+	
+}
+.underline {
+	height: 2px;
+    width: 100%;
+    margin: auto;
+    background-color: #848484;
+}
+.todo {
+	display: flex;
+	flex-direction:column;
+	justify-content:center;
+	align-self: flex-start;
+	width: 23%;
+	background-color: #01579b !important;
+	
+}
+.todo__new__wrapper {
+
+	width: 100%;
+	background-color: #01579b !important;
+	color: white;
+	
+}
+.todo__new {
+	width: 70%;
+    margin: auto;
+    margin-top: 100px;
+   
+
+}
+#task {
+	width: 100%;
+	border-bottom: 1px solid #b8b9b1;
+	margin-bottom: 0px;
+}
+#add {
+	
+	color: #01579b;
+	width: 25%;
+	background-color: #b8b9b1;
+	font-size: 20px;
+}
+.progres {
+	display: flex;
+	flex-direction:column;
+	justify-content:center;
+	align-self: flex-start;
+	width: 23%;
+	background-color: #01579b !important;
+}
+.review {
+	display: flex;
+	flex-direction:column;
+	justify-content:center;
+	align-self: flex-start;
+	width: 23%;
+	background-color: #01579b !important;
+}
+.done {
+	display: flex;
+	flex-direction:column;
+	justify-content:center;
+	align-self: flex-start;
+	width: 23%;
+	background-color: #01579b !important;
+}
+.god {
+	width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+.remove {
+	color: red;
+    float: right;
+    display: flex;
+}
+.rmbtn {
+	height: 100%;
+}

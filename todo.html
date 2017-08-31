@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <link rel="stylesheet" type="text/css" href="todo.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Tammudu" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Tammudu|Permanent+Marker" rel="stylesheet">
+
+
+</head>
+
+<body>
+	<div class="page">
+		<div class="header">
+			<a class="header__text">ToDo-manager</a>
+		</div>
+
+		<div class="todo__new">
+			<div class="card-panel card__feature">
+				<input id="task" placeholder="Enter a new task">
+				<button id="add">Add</button>
+			</div>
+		</div>
+	
+		<div class="mainbody">
+			<div class="todo card-panel">
+				<div class="mainbodyall__head">TODO</div>
+				<div class="underline"></div>
+				<ul id="todos" ondrop="drop_handler(event,this);" 
+						 ondragover="dragover_handler(event);">
+				</ul>
+			</div>
+
+			<div class="progres card-panel">
+				<div class="mainbodyall__head">PROGRESS</div>
+				<div class="underline"></div>
+				<ul id="progreses" ondrop="drop_handler(event,this);" 
+						 ondragover="dragover_handler(event);">
+				</ul>
+			</div>
+
+			<div class="review card-panel">
+				<div class="mainbodyall__head">REVIEW</div>
+				<div class="underline"></div>
+				<ul id="reviews" ondrop="drop_handler(event,this);" 
+						 ondragover="dragover_handler(event);">
+				</ul>
+			</div>
+
+			<div class="done card-panel">
+				<div class="mainbodyall__head">DONE</div>
+				<div class="underline"></div>
+				<ul id="dones" ondrop="drop_handler(event,this);" 
+						 ondragover="dragover_handler(event);">
+				</ul>
+			</div>
+			
+		</div>
+		
+		<script src="todo.js"></script>
+	</div>	
+</body>
+</html>
+ 
