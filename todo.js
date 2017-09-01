@@ -5,7 +5,6 @@ var currentcard;
 
 function add() {
     var task = document.getElementById('task').value;
-    console.log(task);
     if(task=="") {
     	window.alert("Enter Any Task");
 	}
@@ -22,18 +21,24 @@ function createnewcard(task) {
 		var newcard = document.createElement("li");
 	    var textfield = document.createElement("p");
 	    var removebutton = document.createElement("button");
+	    var editbutton = document.createElement("button");
+
 	    var statusfield = document.createElement("p");
-	    removebutton.setAttribute("class","rmbtn");
+	    removebutton.setAttribute("class"," material-icons rmbtn");
+	    editbutton.setAttribute("class"," material-icons edtbtn");
 	    statusfield.setAttribute("class","status ");
 	    status="Todo";
-	    statusfield.innerHTML="status:"+status;
-	    removebutton.innerHTML="X";
+	    statusfield.innerHTML="status: "+status;
+	    removebutton.innerHTML="delete";
+	    editbutton.innerHTML="create";
 	    removebutton.addEventListener("click",remove);
+	    editbutton.addEventListener("click",edit);
 	    newcard.appendChild(textfield);
 	    newcard.appendChild(removebutton);
 	    newcard.appendChild(statusfield);
+	    newcard.appendChild(editbutton);
 	    textfield.setAttribute("id","textfield");
-	    textfield.addEventListener('dblclick', edit);
+	    textfield.addEventListener('blur', endedit);
 	    textfield.innerHTML= task;
 	    newcard.setAttribute("id",counter);
 	    counter +=1;
@@ -48,20 +53,20 @@ function remove() {
  	listtoremove.remove();
 }
 function edit() {
-	console.log(this);
+	var currentlielement = this.parentNode;
+	var currenttextfield = currentlielement.childNodes[0];
+	currenttextfield.setAttribute("contenteditable","true");
 }
-
+function endedit() {
+	this.setAttribute("contenteditable","false");
+}
 function drag_handler(ev) {
-	console.log("Drag");
-	console.log(ev.target.id);
 	currentcard = ev.target.id;
 }
 function dragstart_handler(ev) {
-	console.log("dragStart");
 	ev.dataTransfer.setData("text", ev.target.id);
 }
 function drop_handler(ev,form) {
-	console.log("Drop");
 	ev.preventDefault();
 	var data = ev.dataTransfer.getData("text");
 	form.appendChild(document.getElementById(data));
@@ -74,13 +79,12 @@ function drop_handler(ev,form) {
 		case "dones" : console.log("3"); status="Done" ; break;
 		
 	}
-	card.childNodes[2].innerHTML="status:"+status;
+	card.childNodes[2].innerHTML="status: "+status;
 	console.log(status);
 
 }
 function dragover_handler(ev) {
- console.log("dragOver");
- ev.preventDefault();
+	ev.preventDefault();
 }
 
 document.getElementById('add').addEventListener('click', add);

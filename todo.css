@@ -32,7 +32,7 @@ p {
     margin-top: 0px;
     border-bottom: 1px solid #b8b9b1;
     margin-bottom: 0px;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 .page {
@@ -149,15 +149,33 @@ p {
     display: flex;
 }
 .rmbtn {
-	width: 22%;
-	height: 32%;
+	width: 17%;
+    height: 34%;
     display: inline-block;
     float: right;
     margin-right: 4px;
     background-color: #b8b9b1;
+    font-size: 19px !important;
+    padding: 0px;
+    background-color: #b8b9b1 !important;
+}
+.edtbtn {
+	width: 17%;
+    height: 34%;
+    display: inline-block;
+    float: left;
+    margin-left: 4px;
+    background-color: #b8b9b1;
+    font-size: 19px !important;
+    padding: 0px;
+    background-color: #b8b9b1 !important;
 }
 .status {
-	width: 67%;
+	width: 59.4%;
     vertical-align: -webkit-baseline-middle;
     text-align: center;
+    max-height: 35px;
+    border-bottom: none;
+    font-size: 17px;
+    padding: 0px;
 }
